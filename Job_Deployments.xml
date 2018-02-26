@@ -1,0 +1,6 @@
+<JobDeployments>
+	<Job name=“SampleJob“ owner=“SQLServerUserName“ scheduleJob="True" startHour="6" startMinute="30" frequency="Daily" interval="1" agentServerName=“ServerToScheduleJobOn”>
+		<JobStep type="SSIS" ssisServer=“SSISServerName” folder=“SSISFolder” project=“SSISProjectOne” masterPackage=“SSISProjectOnePackageToRun.dtsx” environmentReference=“SSISEnvironmentReference” catalog="SSISDB" thirtyTwoBitRuntime="False" goToNextStepOnSuccess="True" goToNextStepOnFailure="False" />
+		<JobStep type="SSIS" ssisServer=“SSISServerName” folder=“SSISFolder” project=“SSISProjectTwo” masterPackage=“SSISProjectTwoPackageToRun.dtsx" environmentReference=“SSISEnvironment” catalog="SSISDB" thirtyTwoBitRuntime="True" goToNextStepOnSuccess="False" goToNextStepOnFailure="False" />
+	</Job>
+</JobDeployments>
